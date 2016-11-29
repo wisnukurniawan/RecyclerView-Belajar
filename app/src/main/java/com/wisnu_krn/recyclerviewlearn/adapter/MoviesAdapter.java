@@ -19,6 +19,18 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
 
     private List<Movie> moviesList;
 
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView title, year, genre;
+
+        public MyViewHolder(View view) {
+            super(view);
+            title = (TextView) view.findViewById(R.id.title);
+            genre = (TextView) view.findViewById(R.id.genre);
+            year = (TextView) view.findViewById(R.id.year);
+        }
+    }
+
+
     public MoviesAdapter(List<Movie> moviesList) {
         this.moviesList = moviesList;
     }
@@ -43,15 +55,5 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
     public int getItemCount() {
         return moviesList.size();
     }
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, year, genre;
-
-        public MyViewHolder(View itemView) {
-            super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title);
-            genre = (TextView) itemView.findViewById(R.id.genre);
-            year = (TextView) itemView.findViewById(R.id.year);
-        }
-    }
 }
+

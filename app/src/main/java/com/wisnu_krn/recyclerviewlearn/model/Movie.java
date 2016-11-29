@@ -8,7 +8,6 @@ public class Movie {
     private String title, genre, year;
 
     public Movie() {
-
     }
 
     public Movie(String title, String genre, String year) {
@@ -21,16 +20,8 @@ public class Movie {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setTitle(String name) {
+        this.title = name;
     }
 
     public String getYear() {
@@ -41,5 +32,11 @@ public class Movie {
         this.year = year;
     }
 
+    public String getGenre() {
+        return genre;
+    }
 
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 }
